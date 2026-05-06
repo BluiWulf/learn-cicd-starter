@@ -1,5 +1,5 @@
 
-![Test Status](https://github.com/bluiwulf/learn-cici-starter/actions/workflows/ci.yml/badge.svg)
+[![CI Workflow Status](https://github.com/BluiWulf/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/BluiWulf/learn-cicd-starter/actions/workflows/ci.yml)
 
 # learn-cicd-starter (Notely)
 
