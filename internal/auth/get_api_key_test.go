@@ -17,8 +17,8 @@ func TestGetAPIKey(t *testing.T){
 
 	tests := []test{
 		{
-			key:      "Authorization",
-			value:    "ApiKey failing-test",
+			key:      "",
+			value:    "",
 			expected: "",
 			experr:   "no authorization header",
 		},
