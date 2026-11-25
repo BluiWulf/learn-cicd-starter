@@ -1,15 +1,15 @@
 package auth
 
 import (
+	"fmt"
+	"net/http"
 	"strings"
 	"testing"
-	"net/http"
-	"fmt"
 )
 
-func TestGetAPIKey(t *testing.T){
+func TestGetAPIKey(t *testing.T) {
 	type test struct {
-		key 	 string
+		key      string
 		value    string
 		expected string
 		experr   string
@@ -43,10 +43,10 @@ func TestGetAPIKey(t *testing.T){
 	}
 
 	for i, testcase := range tests {
-		t.Run(fmt.Sprintf("TestGetAPIKey Case #%v:", i), func(t *testing.T){
+		t.Run(fmt.Sprintf("TestGetAPIKey Case #%v:", i), func(t *testing.T) {
 			header := http.Header{}
 			header.Add(testcase.key, testcase.value)
-			
+
 			result, err := GetAPIKey(header)
 			if err != nil {
 				if strings.Contains(err.Error(), testcase.experr) {
